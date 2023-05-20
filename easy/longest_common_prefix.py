@@ -1,10 +1,10 @@
 import sys
 import pprint
+from typing import List
 
 pprint.pprint(sys.path)
 sys.path.append('/home/shay/everyday_leetcode')
-from utils.time_calculator import time_execution
-from typing import List
+from utils.time_calculator import time_execution  # noqa: E402
 
 
 def longestCommonPrefixMySillyWay(strs: List[str]) -> str:
@@ -64,5 +64,5 @@ if __name__ == '__main__':
 
     print(f'Silly way: {sillyway:.10f}s')
     print(f'Smarter way: {smarterway:.10f}s')
-    print(f'Smarter way faster than Silly way total of: {smarterway / sillyway * 100:.2f} ')
-
+    print(
+        f'Smarter way faster than Silly way total of: {smarterway / sillyway * 100:.2f} ')
