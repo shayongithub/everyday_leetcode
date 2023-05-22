@@ -1,9 +1,10 @@
+import os
 import sys
 import pprint
 from typing import List
 
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), os.pardir)))
 pprint.pprint(sys.path)
-sys.path.append('/home/shay/everyday_leetcode')
 from utils.time_calculator import time_execution  # noqa: E402
 
 
