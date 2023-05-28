@@ -36,8 +36,8 @@ def climbStairDPWithSavingMemo(n: int) -> int:
 
     ans = 0
 
-    first_prev = 2
-    second_prev = 1
+    first_prev = 2 
+    second_prev = 1 
 
     for _ in range(3, n + 1):
         ans = first_prev + second_prev
