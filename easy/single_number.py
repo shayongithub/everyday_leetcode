@@ -25,16 +25,16 @@ def singleNumber(nums: List[int]) -> int:
 
 
 def singleNumberGood(nums: List[int]) -> int:
-    '''
+    """
     Using bitwise operator - XOR to compare each number in the array.
     XOR return 0 if two numbers are the same, 1 otherwise
 
     The reduce() function accepts:
-        - a function 
-        - a sequence 
+        - a function
+        - a sequence
             Returns a single value calculated over the given sequence
             Details: https://thepythonguru.com/python-builtin-functions/reduce/
-    '''
+    """
 
     return reduce(lambda x1, x2: x1 ^ x2, nums)
 
