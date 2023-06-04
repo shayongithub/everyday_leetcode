@@ -23,7 +23,3 @@ def getIntersectionNode(headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         curB = curB.next
 
     return None
-
-
-if __name__ == "__main__":
-    
