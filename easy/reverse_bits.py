@@ -6,7 +6,15 @@ def reverseBits(n):
     return int(n[::-1], 2)
 
 
+def reverseBitsManipulation(n: int) -> int:
+    res = 0
+    for _ in range(32):
+        res = (res << 1) + (n & 1)
+        n >>= 1
+    return res
+
+
 if __name__ == "__main__":
     n = 0b00000010100101000001111010011100
 
-    print(reverseBits(n))
+    print(reverseBitsManipulation(n))
