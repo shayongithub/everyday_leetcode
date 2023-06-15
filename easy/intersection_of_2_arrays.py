@@ -19,16 +19,21 @@ def intersect(nums1: List[int], nums2: List[int]) -> List[int]:
 
     cnt1 = Counter(nums1)
     cnt2 = Counter(nums2)
-
-    set1 = set(cnt1.keys())
-    set2 = set(cnt2.keys())
     ans = []
-    intersects = set1.intersection(set2)
 
-    for num in intersects:
-        if cnt1.get(num) >= cnt2.get(num):
-            ans.extend([num] * cnt2.get(num))
-        else:
-            ans.extend([num] * cnt1.get(num))
+    # set1 = set(cnt1.keys())
+    # set2 = set(cnt2.keys())
+
+    # intersects = set1.intersection(set2)
+
+    # for num in intersects:
+    #     if cnt1.get(num) >= cnt2.get(num):
+    #         ans.extend([num] * cnt2.get(num))
+    #     else:
+    #         ans.extend([num] * cnt1.get(num))
+
+    # Improved version: as we can take the intersection with the & operator between keys
+    for key in cnt1.keys() & cnt2.keys():
+        ans.extend([key] * min(cnt1.get(key), cnt2.get(key)))
 
     return ans
