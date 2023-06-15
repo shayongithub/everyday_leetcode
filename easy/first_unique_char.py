@@ -19,12 +19,18 @@ def firstUniqChar(s: str) -> int:
         else:
             dic[char] = ind
 
-    filterd = dict((k, v) for k, v in dic.items() if v != -1)
+    for i in range(len(s)):
+        if dic[s[i]] == 1:
+            return i
+    
+    return -1
 
-    if not filterd:
-        return -1
+    # filterd = dict((k, v) for k, v in dic.items() if v != -1)
 
-    return min(filterd.values())
+    # if not filterd:
+    #     return -1
+
+    # return min(filterd.values())
 
 
 if __name__ == "__main__":
