@@ -36,7 +36,7 @@ def divideBitManipulation(dividend: int, divisor: int) -> int:
 
 
 def divideSmartWay(dividend: int, divisor: int) -> int:
-    if dividend == 0:
+    if dividend == 0: 
         return 0
 
     sign = 1 if dividend * divisor > 0 else -1
